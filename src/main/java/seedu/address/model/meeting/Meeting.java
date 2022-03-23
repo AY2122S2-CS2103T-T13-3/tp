@@ -2,8 +2,6 @@ package seedu.address.model.meeting;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
-import java.time.LocalDateTime;
-//import java.time.temporal.ChronoUnit;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Objects;
@@ -64,10 +62,8 @@ public class Meeting {
         return new MeetingDateTime(getNextRecurrence());
     }
 
-    private LocalDateTime getNextRecurrence() {
-        final LocalDateTime today = LocalDateTime.now();
-        final LocalDateTime endDateTime = duration.getEndDateTime(dateTime.datetime);
-        return endDateTime;
+    private String getNextRecurrence() {
+        return dateTime.toString();
 
         //        final long weeksElapsed = ChronoUnit.WEEKS.between(endDateTime, today);
         //        if (weeksElapsed < 0) {
