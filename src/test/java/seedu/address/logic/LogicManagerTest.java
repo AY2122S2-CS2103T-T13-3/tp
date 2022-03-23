@@ -3,14 +3,14 @@ package seedu.address.logic;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_MEETING_DISPLAYED_INDEX;
 import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
-//import static seedu.address.logic.commands.CommandTestUtil.DATETIME_DESC_LECTURE;
-//import static seedu.address.logic.commands.CommandTestUtil.DURATION_DESC_LECTURE;
-//import static seedu.address.logic.commands.CommandTestUtil.MODULE_DESC_LECTURE;
-//import static seedu.address.logic.commands.CommandTestUtil.NAME_DESC_LECTURE;
-//import static seedu.address.logic.commands.CommandTestUtil.RECURRING_DESC_LECTURE;
-//import static seedu.address.logic.commands.CommandTestUtil.URL_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.DATETIME_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.DURATION_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.MODULE_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.NAME_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.RECURRING_DESC_LECTURE;
+import static seedu.address.logic.commands.CommandTestUtil.URL_DESC_LECTURE;
 import static seedu.address.testutil.Assert.assertThrows;
-//import static seedu.address.testutil.typical.TypicalMeetings.CS2103;
+import static seedu.address.testutil.typical.TypicalMeetings.CS2103;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -21,7 +21,7 @@ import org.junit.jupiter.api.io.TempDir;
 
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
-//import seedu.address.logic.commands.meeting.AddMeetingCommand;
+import seedu.address.logic.commands.meeting.AddMeetingCommand;
 import seedu.address.logic.commands.meeting.ListMeetingCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.LinkyTime;
@@ -29,11 +29,11 @@ import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.ReadOnlyLinkyTime;
 import seedu.address.model.UserPrefs;
-//import seedu.address.model.meeting.Meeting;
+import seedu.address.model.meeting.Meeting;
 import seedu.address.storage.JsonLinkyTimeStorage;
 import seedu.address.storage.JsonUserPrefsStorage;
 import seedu.address.storage.StorageManager;
-//import seedu.address.testutil.meeting.MeetingBuilder;
+import seedu.address.testutil.meeting.MeetingBuilder;
 
 public class LogicManagerTest {
     private static final IOException DUMMY_IO_EXCEPTION = new IOException("dummy exception");
