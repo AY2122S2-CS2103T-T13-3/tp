@@ -81,14 +81,18 @@ public class LogicManagerTest {
                 new JsonUserPrefsStorage(temporaryFolder.resolve("ioExceptionUserPrefs.json"));
         final StorageManager storage = new StorageManager(linkyTimeStorage, userPrefsStorage);
         logic = new LogicManager(model, storage);
-
+        System.out.println("Clear 1");
         // Execute add command
         final String addMeetingCommand = AddMeetingCommand.COMMAND_WORD + NAME_DESC_LECTURE + URL_DESC_LECTURE
                 + DATETIME_DESC_LECTURE + DURATION_DESC_LECTURE + MODULE_DESC_LECTURE + RECURRING_DESC_LECTURE;
         final Meeting expectedMeeting = new MeetingBuilder(CS2103).withTags().build();
+        System.out.println("Clear 2");
         final ModelManager expectedModel = new ModelManager();
+        System.out.println("Clear 3");
         expectedModel.addMeeting(expectedMeeting);
+        System.out.println("Clear 4");
         final String expectedMessage = LogicManager.FILE_OPS_ERROR_MESSAGE + DUMMY_IO_EXCEPTION;
+        System.out.println("Clear 5");
         assertCommandFailure(addMeetingCommand, CommandException.class, expectedMessage, expectedModel);
     }
 
