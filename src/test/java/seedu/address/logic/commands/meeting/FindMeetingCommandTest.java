@@ -1,8 +1,8 @@
 package seedu.address.logic.commands.meeting;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-//import static org.junit.jupiter.api.Assertions.assertFalse;
-//import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.commons.core.Messages.MESSAGE_MEETINGS_LISTED_OVERVIEW;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.testutil.typical.TypicalLinkyTime.getTypicalLinkyTime;
@@ -33,25 +33,25 @@ public class FindMeetingCommandTest {
                 new MeetingContainsAllKeywordsPredicate(Collections.singletonList("first"));
         MeetingContainsAllKeywordsPredicate secondPredicate =
                 new MeetingContainsAllKeywordsPredicate(Collections.singletonList("second"));
-        throw new RuntimeException("");
-        //        final FindMeetingCommand findFirstCommand = new FindMeetingCommand(firstPredicate);
-        //        final FindMeetingCommand findSecondCommand = new FindMeetingCommand(secondPredicate);
-        //
-        //        // same object -> returns true
-        //        assertTrue(findFirstCommand.equals(findFirstCommand));
-        //
-        //        // same values -> returns true
-        //        final FindMeetingCommand findFirstCommandCopy = new FindMeetingCommand(firstPredicate);
-        //        assertTrue(findFirstCommand.equals(findFirstCommandCopy));
-        //
-        //        // different types -> returns false
-        //        assertFalse(findFirstCommand.equals(1));
-        //
-        //        // null -> returns false
-        //        assertFalse(findFirstCommand.equals(null));
-        //
-        //        // different meeting -> returns false
-        //        assertFalse(findFirstCommand.equals(findSecondCommand));
+
+        final FindMeetingCommand findFirstCommand = new FindMeetingCommand(firstPredicate);
+        final FindMeetingCommand findSecondCommand = new FindMeetingCommand(secondPredicate);
+
+        // same object -> returns true
+        assertTrue(findFirstCommand.equals(findFirstCommand));
+
+        // same values -> returns true
+        final FindMeetingCommand findFirstCommandCopy = new FindMeetingCommand(firstPredicate);
+        assertTrue(findFirstCommand.equals(findFirstCommandCopy));
+
+        // different types -> returns false
+        assertFalse(findFirstCommand.equals(1));
+
+        // null -> returns false
+        assertFalse(findFirstCommand.equals(null));
+
+        // different meeting -> returns false
+        assertFalse(findFirstCommand.equals(findSecondCommand));
     }
 
     @Test
