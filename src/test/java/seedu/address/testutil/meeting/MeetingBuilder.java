@@ -51,12 +51,11 @@ public class MeetingBuilder {
     public MeetingBuilder(Meeting meetingToCopy) {
         name = meetingToCopy.getName();
         url = meetingToCopy.getUrl();
-        throw new RuntimeException("CLEAR ONE");
-        //        dateTime = meetingToCopy.getDateTime();
-        //        duration = meetingToCopy.getDuration();
-        //        module = meetingToCopy.getModule();
-        //        isRecurring = meetingToCopy.getIsRecurring();
-        //        tags = new HashSet<>(meetingToCopy.getTags());
+        dateTime = meetingToCopy.getDateTime();
+        duration = meetingToCopy.getDuration();
+        module = meetingToCopy.getModule();
+        isRecurring = meetingToCopy.getIsRecurring();
+        tags = new HashSet<>(meetingToCopy.getTags());
     }
 
     /**
