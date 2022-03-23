@@ -4,7 +4,7 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
 //import java.time.LocalDateTime;
-//import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatter;
 //import java.time.format.DateTimeParseException;
 //import java.time.format.ResolverStyle;
 
@@ -15,10 +15,8 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
 public class MeetingDateTime {
     public static final String MESSAGE_CONSTRAINTS =
             "DateTime should be formatted as d-M-uuuu h:mma; e.g. 4-5-2021 2:30pm";
-    public static final String INPUT_FORMAT = "oops";
-    public static final String DISPLAY_FORMAT = "nope";
-    //    public static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("d-M-uuuu h:mma");
-    //    public static final DateTimeFormatter DISPLAY_FORMAT = DateTimeFormatter.ofPattern("E d MMM uuuu h:mma");
+    public static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("d-M-uuuu h:mma");
+    public static final DateTimeFormatter DISPLAY_FORMAT = DateTimeFormatter.ofPattern("E d MMM uuuu h:mma");
 
     public final String datetime;
 
