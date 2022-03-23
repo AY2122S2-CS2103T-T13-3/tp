@@ -85,15 +85,10 @@ public class LogicManagerTest {
         final String addMeetingCommand = AddMeetingCommand.COMMAND_WORD + NAME_DESC_LECTURE + URL_DESC_LECTURE
                 + DATETIME_DESC_LECTURE + DURATION_DESC_LECTURE + MODULE_DESC_LECTURE + RECURRING_DESC_LECTURE;
         final Meeting expectedMeeting = new MeetingBuilder(CS2103).withTags().build();
-        throw new RuntimeException("CLEAR ONE");
-        //        System.out.println("Clear 2");
-        //        final ModelManager expectedModel = new ModelManager();
-        //        System.out.println("Clear 3");
-        //        expectedModel.addMeeting(expectedMeeting);
-        //        System.out.println("Clear 4");
-        //        final String expectedMessage = LogicManager.FILE_OPS_ERROR_MESSAGE + DUMMY_IO_EXCEPTION;
-        //        System.out.println("Clear 5");
-        //        assertCommandFailure(addMeetingCommand, CommandException.class, expectedMessage, expectedModel);
+        final ModelManager expectedModel = new ModelManager();
+        expectedModel.addMeeting(expectedMeeting);
+        final String expectedMessage = LogicManager.FILE_OPS_ERROR_MESSAGE + DUMMY_IO_EXCEPTION;
+        assertCommandFailure(addMeetingCommand, CommandException.class, expectedMessage, expectedModel);
     }
 
     @Test
