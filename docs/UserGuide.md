@@ -86,7 +86,7 @@ Each module is displayed as shown in the example above.
    Some example commands you can try:
 
     * `list` : Lists all meetings.
-    * `madd m/CS2105` : Adds a module called `CS2105` to the list of modules.
+    * `madd n/CS2105` : Adds a module called `CS2105` to the list of modules.
     * `add n/Tutorial u/https://www.zoom.com d/25-04-2022 1400 dur/2 m/1 r/Y t/Quiz` : Adds a meeting named `Tutorial` to the list of meetings.
     * `delete 3` : Deletes the 3rd meeting shown in the current list.
     * `exit` : Exits the app.
